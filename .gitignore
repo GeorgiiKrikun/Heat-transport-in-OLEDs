@@ -1,0 +1,29 @@
+# 4 files which Overleaf doesnt want me to push
+*.aux
+*.blg
+*.log
+*.synctex.gz
+#almost everything
+heat_conductivity.pdf
+*.png
+*.svg
+*.py
+*.qti
+*.ods
+*.csv
+plots/processed_results/*
+*.pdf
+
+#trash after merge
+*.orig
+
+#Whitelist for plots used in paper
+
+!plots/General_plots_0.pdf
+!plots/new_bc.pdf
+!plots/Fig_3.pdf
+!plots/I-V.pdf
+!plots/General_plots_2.pdf
+!plots/General_plots_3.pdf
+!plots/General_plots_4.pdf
+
