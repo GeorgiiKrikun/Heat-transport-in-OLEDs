@@ -36,6 +36,7 @@ preprint,%
 \usepackage{graphicx}% Include figure files
 \usepackage{dcolumn}% Align table columns on decimal point
 \usepackage{bm}% bold math
+\usepackage[outdir=./plots/]{epstopdf}
 
 
 % \usepackage[utf8]{inputenc}
@@ -44,7 +45,7 @@ preprint,%
 % \usepackage{tabularx}
 % \usepackage{xcolor}
  \graphicspath{ {plots/} }
- \DeclareGraphicsExtensions{.pdf}
+ %\DeclareGraphicsExtensions{.}
 
 %\usepackage[mathlines]{lineno}% Enable numbering of text and display math
 %\linenumbers\relax % Commence numbering lines
@@ -71,6 +72,7 @@ preprint,%
  	\textcolor{blue}{\textsf{{\footnotesize \textbf{- #1:} #2 -}}}\newline
  	%\renewcommand{\baselinestretch}{1.5} 
  }
+ 
 % % UP TO HERE, BEFORE SUBMISSION
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -191,7 +193,7 @@ With such a relation, even if approximate, we would be able to predict how the O
 
 \begin{figure}
     \centering	
-    \includegraphics[width=0.25\textwidth]{new_bc} 
+    \includegraphics[width=0.25\textwidth]{new_bc.eps}
     \caption{ Schematic illustration of the thermal conductivity $\kappa$ (upper panel) and the thermal transport coefficient $h$ (lower panel). Without heating in the layer, the thermal conductivity $\kappa$ is the coefficient of proportionality between a heat flux $q$ and the temperature gradient $T_2 - T_1$ (Fourier law), $L$ denotes the thickness of the layer. For a heat flux $q$ across an interface formed by two materials, the heat transfer coefficient $h$ determines the difference between the temperatures on each side of device.}
     \label{fig:bcpic}
 \end{figure}
@@ -247,7 +249,7 @@ In this orientation, the externally applied voltage shall be uniformly applied b
 
 \begin{figure}
 	\centering
-    \includegraphics[width=0.5\textwidth]{General_plots_0}
+    \includegraphics[width=0.5\textwidth]{General_plots_0.pdf}
     \caption{(a) Schematic cross section of an OLED containing an electron (green) and hole conducting layer (blue) sandwiched between two contacts. 
     Beyond these electrical contacts, an encapsulation layer and a substrate with their heat transfer coefficients to the ambient, $h_{\mathrm{E}}$ and $h_{\mathrm{S}}$, are considered. 
     Within the organic layers, the coupled charge and heat transport is self-consistently simulated with a drift-diffusion approach. 
@@ -368,7 +370,7 @@ The general analytic solution $T(z)$ of Eq.~(\ref{eq:1Dheatequation}) can be obt
 Such a sequence is indicated in Figure~\ref{fig:MultiLayersSetup}.
 \begin{figure}
 	\centering
-	\includegraphics[width=0.4\textwidth]{General_plots_3}
+	\includegraphics[width=0.4\textwidth]{General_plots_3.pdf}
 	\caption{Discretized stack of multiple layers for solving the 1D heat equation. The orange line indicates the heat density distribution $H(z)$. The top labels enumerate individual slices in the stack, each of which has its own thermal conductivity $\kappa_{j'}$ and thickness $L_{j'}$. }
 	\label{fig:MultiLayersSetup}
 \end{figure}
@@ -454,7 +456,7 @@ Thermal conductivities of the organic layers realistically vary\cite{Reisdorffer
 
 \begin{figure}
 	\centering
-    \includegraphics[width=1\textwidth]{Fig_3} 
+    \includegraphics[width=1\textwidth]{Fig_3.pdf} 
     \caption{(a) Difference between taking into account mobility dependence on temperature and having constant mobility. (b) Dependence of maximum temperature in the device on the thermal transfer coefficient $h$ for different heat conductivities (given in \thermalconductivity) for the device shown in Figure \ref{fig:setup} operated at 5~V. 
     For low values of $h$, particularly in combination with $\kappa$ values exceeding $10^{-3.5}$~\thermalconductivity~(blue line), such maximum temperatures cannot be given, because the generated heat cannot be fully dissipated from the device into its environment. Hence, the device heating never stops and the simulations fail to converge.}
 \label{fig:I-Vandh-k-maxT}
@@ -558,7 +560,7 @@ Figure~\ref{fig:I-V}-a shows the current of the symmetric model OLED with $\kapp
 %
 \begin{figure}
 \centering
-\includegraphics[width=0.5\textwidth]{I-V} 
+\includegraphics[width=0.5\textwidth]{I-V.pdf} 
 \caption{(a)~Current (solid line) and temperature (dashed line) against voltage for the device shown in Figure \ref{fig:setup} for $\kappa$~=~\thermalconductivity~and $h$~=~10$^{5}$~\hcoefficient~operated at room temperature $T$~=~300~K. The voltage at which the current diverges is indicated with a vertical line. Beyond this voltage, the temperature inside the device rises too quickly to allow a full heat dissipation and prevents a stable device operation (vicious cycle). (b)~Current-voltage characteristics for heat transfer coefficients $h$ between 10$^{3}$ and 10$^{5}$~\hcoefficient. The characteristics coinside at small voltages. The better the device is cooled (the larger $h$), the larger is the voltage, beyond which the current diverges (indicated by vertical lines).}
 \label{fig:I-V}
 \end{figure}
@@ -716,7 +718,7 @@ Figure~\ref{fig:connection_to_experiment} shows the relative error between $T_{m
 % push into SUI
 \begin{figure}[h]
 	\centering
-    \includegraphics[width=0.4\textwidth]{General_plots_2}
+    \includegraphics[width=0.4\textwidth]{General_plots_2.pdf}
     \caption{Validity of the maximum temperature predicted by Eq.(\ref{eq:TmaxAsAFunctionOfIVErec}) as a function of the total heat transfer coefficient $h_L + h_R$. Shown is the relative error $\frac{|T_{max,an} - T_{max,sim}| }{T_{max,sim}-300K} - 1$ formed between $T_{max,sim}$ deduced from the full simulation and $T_{max,an}$ predicted from Eq.(\ref{eq:TmaxAsAFunctionOfIVErec}) using only the current obtained from the simulation. In the red shaded region, located at small $h_L + h_R$, the device overheats so that the simulations do not converge.}
     \label{fig:connection_to_experiment}
 \end{figure}
@@ -745,7 +747,7 @@ Since this $H(z)$ is solely governed by the electric properties and operating co
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.75\textwidth]{General_plots_4}
+	\includegraphics[width=0.75\textwidth]{General_plots_4.pdf}
 	\caption{(a) Maximum temperature $T_{max,sim}$ (black) and $T_{max,an}$ (red) in the device as a function of the heat transfer coefficient $h$ at $\kappa$=1~\thermalconductivity. $T_{max,sim}$ are temperature values extracted from simulations of the model OLED operated at 5~V. $T_{max,an}$ are temperature values calculated from the analytical solution of Eq.~(\ref{eq:1Dheatequation}) using the heat generation profile obtained for $h=10^5$~\hcoefficient. (b) Relative increase in temperature compared to the total device heat $H_{tot}$ as a function of the h-coefficient. (c) Maximum temperature $T_{max,sim}$ (black) and $T_{max,an}$ (red) in the device $T_{max}$ as a function of thermal conductivity at h = $10^{4.25}$~\hcoefficient. (d) Local changes in heat density due a change in a thermal parameter. $\frac{H_{h}(z)}{H_{h_{ref}}(z)}-1$ monitors the relative change in heating density when going from $h = 10^{3.5}$ to $10^5$~\hcoefficient at $\kappa$ = 1~\thermalconductivity (black curve) and $\frac{H_{\kappa}(z)}{H_{\kappa_{ref}}(z)}-1$ the relative change in heat density in going from
 	$\kappa = 1$ to $10^{-4}$~\thermalconductivity~for $h$ = $10^{4.25}$~\hcoefficient (red curve).}
 	\label{fig:final4plots}
