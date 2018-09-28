@@ -157,7 +157,7 @@ FInally, we propose several analytic equations, which should provide better gras
 \section{Introduction}
 %\thermalconductivity
 %\hcoefficient
-Two major factors presently hinder the application of organic light emitting diodes (OLEDs) for large-area lighting applications: Device degradation and inhomogeneous light emission from the exterior surface.\cite{Park2011}
+Two major factors presently hinder the application of organic light emitting diodes (OLEDs) for large-area lighting applications: device degradation and inhomogeneous light emission from the exterior surface.\cite{Park2011}
 Both factors strongly relate to excess heat that is generated during operation.
 On the one hand, elevated temperatures inside the OLEDs accelerate degradation,\cite{Xu2004,Zhou2000,Nenna2007} alongside with other factors such as water penetrating into the device \cite{Li2016}, surface roughness, and mass diffusion of material.
 On the other hand, local variations in temperature and, hence, in the in-plane current density give rise to an inhomogeneous brightness distribution.\cite{Garditz2007,Kohari2013} 
@@ -194,16 +194,16 @@ With such a relation, even if approximate, we would be able to predict how the O
 \begin{figure}
     \centering	
     \includegraphics{new_bc.eps}
-    \caption{ Schematic illustration of the thermal conductivity $\kappa$ (upper panel) and the thermal transport coefficient $h$ (lower panel). Without heating in the layer, the thermal conductivity $\kappa$ is the coefficient of proportionality between a heat flux $q$ and the temperature gradient $T_2 - T_1$ (Fourier law), $L$ denotes the thickness of the layer. For a heat flux $q$ across an interface formed by two materials, the heat transfer coefficient $h$ determines the difference between the temperatures on each side of device.}
+    \caption{ Schematic illustration of the thermal conductivity $\kappa$ (left) and the thermal transport coefficient $h$ (right). Without heating in the layer, the thermal conductivity $\kappa$ is the coefficient of proportionality between a heat flux $q$ and the temperature gradient $T_2 - T_1$ (Fourier law), $L$ denotes the thickness of the layer. For a heat flux $q$ across an interface formed by two materials, the heat transfer coefficient $h$ determines the difference between the temperatures on each side of device.}
     \label{fig:bcpic}
 \end{figure}
 
 As a first parameter, we consider the thermal conductivity $\kappa$ of individual organic layers. 
-As illustrated in Figure~\ref{fig:bcpic}-a, $\kappa$ describes how efficient heat is transported from the heat source through a layer of a thickness $L$. 
+As illustrated in Figure~\ref{fig:bcpic}, $\kappa$ describes how efficient heat is transported from the heat source through a layer of a thickness $L$. 
 %
 % There are clear indications that heat outflow from the device can be sufficiently improved by choosing appropriate substrate\cite{Chung2009,Triambulo2016}. This means that interface between border layers and ambient environment plays crucial role. Furthermore, while device performance depend on absolute temperature of organic layers, heating changes device temperature relative to the ambient temperature. Hence, ambient will influence device performance and we need a tool to decouple device thermal properties and ambient properties. 
 % Therefore, we need to introduce interface between ambient and border layers into simulation tool. We are tackling this problem using second parameter, heat transfer coefficient $h$, which can be used to describe heat transport through the interface \cite{Jin2014}.  We are using this parameter to describe particular interfaces between ambient environment and the border layers of the device. 
-The second considered parameter is the heat transfer coefficient $h$ that describes heat transport through an interface (Figure~\ref{fig:bcpic}-b).\cite{Jin2014}
+The second considered parameter is the heat transfer coefficient $h$ that describes heat transport through an interface (Figure~\ref{fig:bcpic}).\cite{Jin2014}
 In the context of OLEDs, heat transfer coefficient between the outermost layers and the ambient environment  appears to be most crucial.
 There are clear indications that the heat outflow from the device can be sufficiently improved by choosing an appropriate substrate.\cite{Chung2009,Triambulo2016} 
 As the generated heat has to be dissipated with respect to ambient temperature, the absolute temperature within the organic layers will be influenced not only by the electric current, but also by the ambient temperature.
@@ -243,20 +243,20 @@ In the regions outside the contacts, i.e., in the encapsulation and substrate la
 %Rather than solving the heat transport equation for the entire device with the same elaborate numerical setup, we directly employ the analytical solution with the heat generation profile within the organic layers as source term.
 In the absence of electric current, it is sufficient to solve the heat transport equation.
 The latter equation can be solved analytically for steady state operation, sparing us to solve the heat transport equation for the entire device with the  elaborate numerical approach necessary for the electrically active region.
-
 For convenience, the OLED cross-section shown in Figure~\ref{fig:setup} is oriented such that the layers are stacked along the z-axis and laterally extended in the x-y plane.
 In this orientation, the externally applied voltage shall be uniformly applied between cathode and anode, i.e., the voltage drops in z-direction and is uniform in x and y directions.
 
 \begin{figure}
 	\centering
     \includegraphics{General_plots_0.eps}
-    \caption{(a) Schematic cross section of an OLED containing an electron (green) and hole conducting layer (blue) sandwiched between two contacts. 
+    \caption{(a) Schematic cross section of an OLED containing an electron and hole conducting layer sandwiched between two contacts. 
     Beyond these electrical contacts, an encapsulation layer and a substrate with their heat transfer coefficients to the ambient, $h_{\mathrm{E}}$ and $h_{\mathrm{S}}$, are considered. 
     Within the organic layers, the coupled charge and heat transport is self-consistently simulated with a drift-diffusion approach. 
-    Due to the absence of heat generation in the encapsulation layer and in the substrate, the heat propagation is considered by directly solving the heat transport equation. 
-    As a consequence, the combined impact of heat transfer to the ambient, heat transfer between and through subsequent encapsulation or substrate layers can be lumped into an effective heat transfer coefficient %    
+    %Due to the absence of heat generation in the encapsulation layer and in the substrate, the heat propagation is considered by directly solving the heat transport equation. 
+    %As a consequence, 
+    The combined impact of heat transfer to the ambient, heat transfer between and through subsequent encapsulation or substrate layers can be lumped into an effective heat transfer coefficient %    
     $h_{\mathrm{L}}$ (encapsulation side) and $h_{\mathrm{R}}$ (substrate side), respectively.
-    (b) Profile of the heat density distribution in a symmetric device between the electrical contacts that are separated by $L$=50~nm, no injection barrier, $h$~=~$h_{\mathrm{L}}$~=~$h_{\mathrm{R}}$=~$10^{4.25}$~\hcoefficient, $\kappa=10^{-2}$(red)/$10^{-3}$(green)/$10^{-4}$(blue)~\thermalconductivity~ in each organic layer operated at room temperature $T$~=~300~K with $V$~=~5~V. 
+    (b) Profile of the heat density distribution in a symmetric device between the electrical contacts that are separated by $L$=50~nm, no injection barrier,  $h$~=~$h_{\mathrm{L}}$~=~$h_{\mathrm{R}}$=~$10^{4.25}$~\hcoefficient, $\kappa=10^{-2}$(bottom)/$10^{-3}$(middle)/$10^{-4}$(top)~\thermalconductivity~ in each organic layer operated at room temperature $T$~=~300~K with $V$~=~5~V. 
     (c) Corresponding temperature distribution.}
 \label{fig:setup}
 \end{figure}
@@ -279,31 +279,31 @@ The continuity equations for the densities of mobile charges, i.e., of electrons
 
 \begin{subequations}
 	\begin{gather}
-		\frac{\partial p}{\partial t} - div\left( \overline{j}_p\right) =G-R\label{eq:contp}\\	
-		\frac{\partial n}{\partial t} - div\left( \overline{j}_n\right)=G-R\label{eq:contn}\\
-		\rho c_p \frac{\partial T}{\partial t}-div\left(\overline{q}_T\right)=H\label{eq:contT}\qquad 
+		\frac{\partial p}{\partial t} - \mathrm{div}\left( \mathbf{j_p}\right) =G-R\label{eq:contp}\\	
+		\frac{\partial n}{\partial t} - \mathrm{div}\left( \mathbf{j_n}\right)=G-R\label{eq:contn}\\
+		\rho c_p \frac{\partial T}{\partial t}-\mathrm{div}\left(\mathbf{q_T}\right)=H\label{eq:contT}\qquad 
 	\end{gather}
     \label{eq:cont}
 \end{subequations}
 
-Therein, $\overline{j}_n$ and $\overline{j}_p$ are the electron and hole flux (rather than the electric current) respectively, $G$ and $R$ the generation and recombination rates. We are using Langevin recombination model.\cite{Langevin1903} 
+Therein, $\mathbf{j_n}$ and $\mathbf{j_p}$ are the electron and hole flux (rather than the electric current) respectively, $G$ and $R$ the generation and recombination rates. We are using Langevin recombination model.\cite{Langevin1903} 
 Note that there are more refined models to account for recombination rates.\cite{Lee2014,VanDerHolst2009} These models, however, would introduce additional free parameters to the model.
-In Eq.~\ref{eq:contT}, $T$ refers to the temperature, $\rho$ to the mass density, $c_p$ to the specific heat capacity, and  $\overline{q}_T$ to the heat flux.
+In Eq.~\ref{eq:contT}, $T$ refers to the temperature, $\rho$ to the mass density, $c_p$ to the specific heat capacity, and  $\mathbf{q_T}$ to the heat flux.
 The term $H$ accounts for the amount of heat energy added or abstracted per unit volume and per unit time. 
 The current density equations connect the fluxes with the densities: 
 \begin{subequations}
 	\begin{gather}
-		\overline{j}_p=\mu_p p \left(\nabla \phi + S \nabla T \right) - D_p \nabla p \label{eq:ddjp} \\
-		\overline{j}_n=-\mu_n n \left(\nabla \phi + S \nabla T \right) - D_n \nabla n \label{eq:ddjn} \\
-		\overline{q}_T=-\kappa \nabla T\qquad \label{eq:fourierlaw}
+		\mathbf{j_p}=\mu_p p \left(\mathbf{\nabla} \phi + S \mathbf{\nabla} T \right) - D_p \mathbf{\nabla} p \label{eq:ddjp} \\
+		\mathbf{j_n}=-\mu_n n \left(\mathbf{\nabla} \phi + S \mathbf{\nabla} T \right) - D_n \mathbf{\nabla} n \label{eq:ddjn} \\
+		\mathbf{q_T}=-\kappa \mathbf{\nabla} T\qquad \label{eq:fourierlaw}
 	\end{gather}
     \label{eq:connectionDensitiesToFluxes}
 \end{subequations}
 Eqs.~(\ref{eq:ddjp},\ref{eq:ddjn}) contain the material parameters responsible for charge transport, i.e., $\mu_i$ is the mobility of the corresponding charge carriers, $D_i$ the diffusion constant, and $S$ the Seebeck coefficient. Eq.~(\ref{eq:fourierlaw}) formulates the Fourier law and contains the heat conductivity $\kappa$.
 To account for the hopping nature of the transport in organic materials, we consider mobilities and a Seebeck coefficient that  depend on electric field, temperature, and charge carrier concentration. 
-There are different models to incorporate this models,\cite{Fishchuk2010,Fishchuk2013} we use relations that were previously extracted from Monte Carlo simulations.\cite{Lu2015,Pasveer2005}
+There are different methods to incorporate this dependencies,\cite{Fishchuk2010,Fishchuk2013} we use relations that were previously extracted from Monte Carlo simulations.\cite{Lu2015,Pasveer2005}
 
-The current densities $\overline{j}_p$ and $\overline{j}_n$ across organic-organic heterojunctions are also treated with Eqs.~(\ref{eq:ddjp},\ref{eq:ddjn}).
+The current densities $\mathbf{j_p}$ and $\mathbf{j_n}$ across organic-organic heterojunctions are also treated with Eqs.~(\ref{eq:ddjp},\ref{eq:ddjn}).
 %
 Besides drift and diffusion, we introduce an additional driving force for electrons and for holes at the position of the heterojunction. 
 The extent of this force reflects how the transport-relevant levels of the two organic materials align at the heterojunction.
@@ -313,25 +313,25 @@ We obtain this force from a generalized electrostatic potential, $\tilde{\phi}$,
 The first term accounts for the difference in the nominal transport level energies $E_{\mathrm{HOMO}}$ and $E_{\mathrm{LUMO}}$ of the two materials by introducing an additional potential drop across the heterojunction, i.e., $E_{\mathrm{HOMO}_1}-E_{\mathrm{HOMO}_2}$ for holes and $E_{\mathrm{LUMO}_1}-E_{\mathrm{LUMO}_2}$ for electrons, respectively. \cite{Sutherland}
 The second term accounts for the fact that the density of states available for hopping transport is changing across the heterojunction.
 We cast this change in the density of states into a local contribution to the generalized electrostatic potential following the argumentation in Ref.~\cite{Liemant}.
-The current densities $\overline{j}_p$ and $\overline{j}_n$ entering and leaving the OLED across the contacts are described by a net injection current.
+The current densities $\mathbf{j_p}$ and $\mathbf{j_n}$ entering and leaving the OLED across the contacts are described by a net injection current.
 This injected current is a superposition of different contributions that are associated to the offset between the transport levels and the workfunction of the electrode metal, forming the injection barrier. We specifically consider current density contributions due to thermionic and tunneling injection (from contact into organic layer) as well as interface recombination (from organic layer into the contact).\cite{Davids1998a,Gruber2012,Scott1999}
 The individual contributions are self-consistently determined as a function of the local situation present at each contact during operation. Particularly important are the temperature (thermionic injection) and the local electric field (thermionic and tunneling injection). 
 
-The local electric field that drives the charges is given as the gradient $-\nabla\phi$ of the electrostatic potential $\phi$. 
-At heterojunctions, this field is replaced by an effective field $-\nabla\tilde{\phi}$ related to the generalized electrostatic potential $\tilde{\phi}$. 
+The local electric field that drives the charges is given as the gradient $-\mathbf{\nabla}\phi$ of the electrostatic potential $\phi$. 
+At heterojunctions, this field is replaced by an effective field $-\mathbf{\nabla}\tilde{\phi}$ related to the generalized electrostatic potential $\tilde{\phi}$. 
 The potential $\phi$ is connected to the local net charge density via the Poisson equation 
 \begin{equation}
-    \epsilon_0 \nabla \left( \epsilon_r \nabla \phi \right) = q \left(n-p\right), \label{eq:poisson}
+    \epsilon_0 \mathbf{\nabla} \left( \epsilon_r \mathbf{\nabla} \phi \right) = q \left(n-p\right), \label{eq:poisson}
 \end{equation}
 in which $\epsilon_r$ is relative dielectric permittivity and $\epsilon_0$ the vacuum permittivity.
 The potential set at the cathode corresponds to the applied voltage $V$, while the potential at the anode is set to zero. 
 
-The heat flow $\overline{q}_T$ across the organic-organic heterojunction is considered in Eq.~(\ref{eq:fourierlaw}) via a thermal conductivity $\kappa$ that is averaged with respect to the $\kappa$ of the layers meeting at the interface.
-The heat flow is directed out of the device, i.e., $\overline{q}_T = \overline{q}_z > 0$ at $z=L$,  if the temperature in the device exceeds the ambient temperature.
+The heat flow $\mathbf{q_T}$ across the organic-organic heterojunction is considered in Eq.~(\ref{eq:fourierlaw}) via a thermal conductivity $\kappa$ that is averaged with respect to the $\kappa$ of the layers meeting at the interface.
+The heat flow is directed out of the device, i.e., $\mathbf{q_T} = \mathbf{q}_z > 0$ at $z=L$,  if the temperature in the device exceeds the ambient temperature.
 The heat flow out of the contacts, i.e., the flow leaving the region in which heat is generated, is assumed to be proportional to the difference in the temperature of the contact surface, e.g., at $z=L$, and the ambient environment $T_{\mathrm{ambient}}$:
 \begin{equation}
 	\label{eq:bcheatflux}
-	\overline{q}_z\left(z=L\right)=h_{R}\left(T_{\mathrm{ambient}}-T\left(z=L\right)\right)
+	\mathbf{q}_z\left(z=L\right)=h_{R}\left(T_{\mathrm{ambient}}-T\left(z=L\right)\right)
 \end{equation}
 Therein, an effective heat transfer coefficient $h_R$ dictates, how well the contact at $z=L$ is thermally connected to the ambient environment. 
 Analogously, we also assume an effective heat transfer coefficient $h_L$ for the contact surface at $z=0$ (Fig.~\ref{fig:bcpic}).
@@ -339,9 +339,9 @@ The higher heat flux through the contact interface is, the higher is the tempera
 The effective heat transfer coefficients $h_L$, $h_R$ are directly related to the propagation of heat through the subsequent layers between the respective contact and the environment. As will be explained in the section "Analytical solution of the heat equation" below, we can express $h_{L}$ and $h_{R}$ in terms of all thermal layer properties that connect the outermost the device surface, either the encapsulation or the substrate, to the ambient enviroment, i.e., the $\kappa$ of the individual layers, the coefficients $h$ between these layers, and the heat transfer coefficients $h_{E}$ and $h_{S}$.
 With this definition, $h_L$, $h_R$ enable us to monitor directly the heat exchange between the electrically active layers and the ambient environment acting as heat sink.
 
-The system of equations (\ref{eq:contp}-\ref{eq:poisson}) with the above-stated boundary conditions is solved in the regions of the organic semiconducting layers. 
+The system of equations (\ref{eq:cont} and \ref{eq:poisson}) with the above-stated boundary conditions is solved in the regions of the organic semiconducting layers. 
 Periodic boundary conditions are imposed along the spatial directions perpendicular to the stacking direction.
-We discretized the equations (\ref{eq:contp}-\ref{eq:poisson}) with the Finite Differences Method on a non-uniform rectangular 3D mesh (for drift-diffusion equation we use the Scharfetter-Gummel discretization scheme \cite{SG}) and solved them iteratively with an explicit time discretization scheme (Euler forward) until steady state was achieved.
+We discretized the equations (\ref{eq:cont} and \ref{eq:poisson}) with the Finite Differences Method on a non-uniform rectangular 3D mesh (for drift-diffusion equation we use the Scharfetter-Gummel discretization scheme \cite{SG}) and solved them iteratively with an explicit time discretization scheme (Euler forward) until steady state was achieved.
 %%%%%%%%
 %%KZ : promote to SUI or leave out
 %%%%%%%%
@@ -371,7 +371,7 @@ Such a sequence is indicated in Figure~\ref{fig:MultiLayersSetup}.
 \begin{figure}
 	\centering
 	\includegraphics[width=0.4\textwidth]{General_plots_3.eps}
-	\caption{Discretized stack of multiple layers for solving the 1D heat equation. The orange line indicates the heat density distribution $H(z)$. The top labels enumerate individual slices in the stack, each of which has its own thermal conductivity $\kappa_{j'}$ and thickness $L_{j'}$. }
+	\caption{Discretized stack of multiple layers for solving the 1D heat equation. The line indicates the heat density distribution $H(z)$. Top labels enumerate individual slices in the stack, each of which has its own thermal conductivity $\kappa_{j'}$ and thickness $L_{j'}$. }
 	\label{fig:MultiLayersSetup}
 \end{figure}
 Note that the Eq.~(\ref{eq:1Dheatequation}) can be solved in terms of discretized slices being considerably thinner than the actual layers. However, such a refined discretization is usually necessary only if the heat generation profile is non-uniform.
@@ -443,7 +443,7 @@ The mobilities are $\mu_{high}~=~6~\cdot~10^{-9}$ and $\mu_{low}~=~6~\cdot~10^{-
 In the simulation, these mobility values correspond to the limit that the mobility attains for low electric fields and low charge carrier densities at room temperature. 
 The relative dielectric permittivity $\epsilon_r$~=~3.5.
 We disregard a direct thermoelectric coupling in our simulations by setting the Seebeck coefficient $S$ to zero.
-Considering the typical values of $S~=~500~\mathrm{\mu V~K^{-1}}$ in organic semiconductors, the related thermal voltages $S \Delta T$ are small compared to the applied voltage.
+Considering the typical values of $S~=~500~\mathrm{\mu V~K^{-1}}$ in organic semiconductors, the related thermal voltages $S \mathrm{\nabla} T$ are small compared to the applied voltage.
 With this premise, the Seebeck coefficient has a negligible effect on the temperature and charge distribution and its disregard speeds up the simulations. 
 %
 We are using for both organic layers a mass density $\rho~=~2490~\mathrm{kg~m^{-3}}$ and a heat capacity $c_p~=~800~\mathrm{J~K^{-1}}$.
@@ -458,13 +458,13 @@ Thermal conductivities of the organic layers realistically vary\cite{Reisdorffer
 	\centering
     \includegraphics{Fig_3.eps} 
     \caption{(a) Difference between taking into account mobility dependence on temperature and having constant mobility. (b) Dependence of maximum temperature in the device on the thermal transfer coefficient $h$ for different heat conductivities (given in \thermalconductivity) for the device shown in Figure \ref{fig:setup} operated at 5~V. 
-    For low values of $h$, particularly in combination with $\kappa$ values exceeding $10^{-3.5}$~\thermalconductivity~(blue line), such maximum temperatures cannot be given, because the generated heat cannot be fully dissipated from the device into its environment. Hence, the device heating never stops and the simulations fail to converge.}
+    For low values of $h$, particularly in combination with $\kappa$ values exceeding $10^{-3.5}$~\thermalconductivity~, such maximum temperatures cannot be given, because the generated heat cannot be fully dissipated from the device into its environment. Hence, the device heating never stops and the simulations fail to converge.}
 \label{fig:I-Vandh-k-maxT}
 \end{figure}
 
 \subsection{Contributions to heating}
 As a starting point, we explore how the generated heat is distributed across our symmetric model OLED operated at $V$~=~5V and at room temperature $T_{\mathrm{ambient}}$~=~300~K. 
-Characteristic heat density distributions for three different values of $\kappa$ = $10^{-2}$, $10^{-3}$, $10^{-4}$~\thermalconductivity~and $h$~=~$10^{4.25}$~$\frac{W}{m^2 K}$ are shown in Fig. \ref{fig:setup}-b.
+Characteristic heat density distributions for three different values of $\kappa$ = $10^{-2}$, $10^{-3}$, $10^{-4}$~\thermalconductivity~and $h$~=~$10^{4.25}$~\hcoefficient  are shown in Fig. \ref{fig:setup}-b.
 Regardless of the values of $\kappa$ and $h$, these distributions are inherently symmetric with respect to the device center and consist of two distinct contributions. 
 (i) The heat density features a sharp peak at the center. 
 This contribution arises from the non-radiative electron-hole recombination that is localized at the organic-organic heterojunction. 
@@ -472,15 +472,14 @@ This contribution arises from the non-radiative electron-hole recombination that
 The largest amount of Joule heat is produced in the center, where the electric field that drives the current is highest. 
 Correspondingly, the heat density drops from the center towards the contacts. 
 
-The temperature distribution across the OLED is shown in Fig.~\ref{fig:setup}-c. Inherent to the symmetric profile of the generated heat, the temperature attains its maximum in the device center at the heterojunction. This maximum temperature depends on the value $\kappa$. However, only for a $\kappa$ as low as 10$^{-4}$~\thermalconductivity~(blue line) a maximum temperature is established that significantly exceeds the ambient temperature (by 40~K).   
+The temperature distribution across the OLED is shown in Fig.~\ref{fig:setup}-c. Inherent to the symmetric profile of the generated heat, the temperature attains its maximum in the device center at the heterojunction. This maximum temperature depends on the value $\kappa$. However, only for a $\kappa$ as low as 10$^{-4}$~\thermalconductivity a maximum temperature is established that significantly exceeds the ambient temperature (by 40~K).   
 
 \subsection{Heat transfer coefficient vs. thermal conductivity}
-To systematically clarify, how the temperature distribution $T(z)$ changes with $h$ and $\kappa$ for a given electric current, we performed simulations in which the values of the thermal conductivities and heat transport coefficients varied by several orders of magnitude. 
+To systematically clarify, how the temperature distribution $T(z)$ changes with $h$ and $\kappa$ for a given voltage, we performed simulations in which the values of the thermal conductivities and heat transport coefficients varied by several orders of magnitude. 
 To learn which combinations of $\kappa$ and $h$ lead to realistic and significant temperature elevations (from 1 to 100~K above room temperature), we intentionally also incorporated values for $\kappa$ and $h$ that materials cannot necessarily attain.
 The maximum temperature taken from the simulated temperature distributions is shown as a function of $h$ for several values of $\kappa$ in Figure \ref{fig:I-Vandh-k-maxT}. 
-Elevated maximum temperatures occur if either $h$ (cf., e.g., $\kappa$=1~\thermalconductivity~(black)) or $\kappa$ (cf. $\kappa$=1 (black) and 10$^{-4}$~\thermalconductivity~(orange)) are small. Small values of $h$ and $\kappa$ correspond to a situation, in which we reduce the ability to dissipate the heat from the OLED and, hence, store more heat inside.
-\InTextComment{E}{What is meant in prvious sentense?}
-The thermal conductivities of the organic layers in the OLEDs, expected to be between 0.1 and 1 \thermalconductivity, have a negligible impact on the temperature; the associated temperatures in Figure~\ref{fig:I-Vandh-k-maxT} (black and purple) are indistinguishable.
+Elevated maximum temperatures occur if either $h$ or $\kappa$ are small. Small values of $h$ and $\kappa$ correspond to a situation, in which we reduce the ability to dissipate the heat from the OLED and, hence, store more heat inside.
+The thermal conductivities of the organic layers in the OLEDs, expected to be between 0.1 and 1 \thermalconductivity, have a negligible impact on the temperature; the associated temperatures in Figure~\ref{fig:I-Vandh-k-maxT} are indistinguishable.
 Even taking a seriously underestimated thermal conductivity of 0.01 W/mK, the corresponding temperature distribution in Fig.~\ref{fig:setup}-b (red line) exceeds the ambient temperature by less than 4~K. 
 This rather unexpected, negligible impact of $\kappa$ roots in the fact that the typical thickness of the electrically active layers is not large enough to sustain a temperature gradient inside the layer. To see this, we develop the following rationale: 
 
@@ -636,7 +635,8 @@ From a practical point of view that means that the charge transport can be consi
 % may influence real world device only in very low, unphysical range. This means that relatively high thermal conductivity we have in organic layers makes temperature profile almost flat across organic layers. This is important conclusion, because it essentially means that despite their strong coupling in the active layers, electric and thermal effects still can be attributed to different layers. From simulation/analytic point of view that means that it is enough to simulate organic layers under fixed temperature to get proper outcome (this is essentially always the assumption in Morte-Carlo studies of OLEDs), while heat equation should be solved outside the device to obtain temperature distribution. 
 
 \section{Acknowledgement}
-This work was funded by the Austrian Climate and Energy Fund (KLIEN) and the Austrian Research Promotion Agency (FFG) through the project “ThermOLED” [FFG No. 848905].
+This work was funded by the Austrian Climate and Energy Fund (KLIEN) and the Austrian Research Promotion Agency (FFG) through the project “ThermOLED” [FFG No. 848905]. The authors would also like to acknowledge the use of HPC resources provided by the ZID of Graz University of Technology.
+
 
 \clearpage
 \bibliographystyle{aapmrev4-1} %aipnum4-1
