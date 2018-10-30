@@ -489,9 +489,11 @@ The temperature distribution across the OLED is shown in Fig.~\ref{fig:setup}-c.
 \subsection{Heat transfer coefficient vs. thermal conductivity}
 To systematically clarify, how the temperature distribution $T(z)$ changes with $h$ and $\kappa$ for a given voltage, we performed simulations in which the values of the thermal conductivities and heat transport coefficients varied by several orders of magnitude. 
 To learn which combinations of $\kappa$ and $h$ lead to realistic and significant temperature elevations (from 1 to 100~K above room temperature), we intentionally also incorporated values for $\kappa$ and $h$ that materials cannot necessarily attain.
-The maximum temperature taken from the simulated temperature distributions is shown as a function of $h$ for several values of $\kappa$ in Figure \ref{fig:I-Vandh-k-maxT}-b. 
+The maximum temperature taken from the simulated temperature distributions is shown as a function of $h$ for several values of $\kappa$ in Figure \ref{fig:I-Vandh-k-maxT}.
+
 Elevated maximum temperatures occur if either $h$ or $\kappa$ are small. Small values of $h$ and $\kappa$ correspond to a situation, in which we reduce the ability to dissipate heat from the OLED and, hence, store more heat inside.
-The thermal conductivities of the organic layers in the OLEDs, expected to be between 0.1 and 1 \thermalconductivity, have a negligible impact on the temperature; the associated temperatures in Figure~\ref{fig:I-Vandh-k-maxT} are indistinguishable.
+This results in a strongly elevated temperature, as seen for $h<10^4$~\hcoefficient~ in Figures \ref{fig:I-Vandh-k-maxT}-a,b. Note that the temperature elevation is particularly driven by the thermally activated charge transport. As shown in Figure \ref{fig:I-Vandh-k-maxT}-a, the attained maximum temperature becomes considerably larger compared to a hypothetical situation with a temperature-independent mobility.
+The thermal conductivities of the organic layers in the OLEDs, expected to be between 0.1 and 1 \thermalconductivity, have a negligible impact on the temperature; the associated temperatures in Figure~\ref{fig:I-Vandh-k-maxT}-b are indistinguishable.
 Even when taking a seriously underestimated thermal conductivity of 0.01 W/mK, the corresponding temperature distribution in Fig.~\ref{fig:setup}-b (red line) exceeds the ambient temperature by less than 4~K. 
 This rather unexpected, negligible impact of $\kappa$ roots in the fact that the typical thickness of the electrically active layers is not large enough to sustain a temperature gradient inside the layer. To see this, we develop the following rationale: 
 
