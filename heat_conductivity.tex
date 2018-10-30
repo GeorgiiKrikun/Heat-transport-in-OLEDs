@@ -80,7 +80,7 @@ preprint,%
 %\usepackage{helvet}
 %\renewcommand{\familydefault}{\sfdefault}
 %\fontsize{8}{11}\selectfont
-\renewcommand{\baselinestretch}{1.2}
+\renewcommand{\baselinestretch}{1.2} %2.0
 
 %defining dimensions
 
@@ -403,7 +403,6 @@ A major challenge for the simulation of the transport through the layers and acr
 Each layer requires the heat conductivity $\kappa$ and a set of parameters that describe charge transport. 
 Each pair of interfaces requires parameterized conditions that ensure charge and energy conservation, such as heat transfer coefficients and injection currents. 
 An unbiased systematic variation of all these parameters yields only limited insight and does not provide leads for relevant relations without generating a very large set of data.
-
 Therefore, we seek a model device for our simulations, that serves three purposes: 
 (i) The device layout should support the setup of a toy model with which the role of the heat transfer coefficients $h$ towards the environment and the heat conductivities $\kappa$ of the organic layers can be conveniently distinguished.
 (ii) The toy model should operate with a strongly reduced amount of parameters so that the impact of charge and heat transport can be disentangled best.
@@ -526,7 +525,7 @@ Firstly, the actual bottleneck for heat dissipation is the combined thermal tran
 Vice versa, the layers that are responsible for electric transport are not relevantly involved in heat dissipation. 
 This implies that the thermal and electrical properties can be optimized \textit{independent} from each other in complementary regions of the device to reach a desired performance. 
 %, 
-Secondly, temperature within the organic layers is uniform, i.e., $T(z)$ = $T$ = const.
+Secondly, the temperature within the organic layers is uniform, i.e., $T(z)$ = $T$ = const.
 Then, $T$ can be immediately related to the total amount of generated heat per unit area, $H_{tot}$, via the heat balance equation $h_L T + h_R T = H_{tot}$:
 %
 \begin{equation}
@@ -618,8 +617,8 @@ Inserting Eqs.~(\ref{eq:JouleHeating},\ref{eq:RecombinationHeating}) into the an
 
 We subjected this relation for $T_{\mathrm{max}}$ to a consistency check to reveal whether we can safely exclude a possible feedback from the heat transported through the encapsulation and substrate layers on the temperature inside the electrically active layers.
 To this aim, we compared the value $T_{\mathrm{max}}$ extracted from the full simulation with the value obtained from Eq.~(\ref{eq:TmaxAsAFunctionOfIVErec}), in which we inserted only the current densities obtained from  the simulations. For a realistic thermal conductivity of 0.5~\thermalconductivity~with an voltage of 5 V applied, we calculated maximum temperature from Eq.~(\ref{eq:TmaxAsAFunctionOfIVErec}). 
-Eq.~(\ref{eq:TmaxAsAFunctionOfIVErec}) reproduces the exact temperature values very well for a large range of heat transfer coefficients $h$; for $h_L + h_R \geq 10^{4}$~\hcoefficient~the relative error in predicted temperatures remains below 1~\%. 
-Only when $h$ approach values for which the device starts to overheat, either a deviation ($4\cdot 10^3 \leq h_L + h_R \leq 10^4$ \hcoefficient) or thermal runaways are obtained ($h_L + h_R \geq 4\cdot 10^3$ \hcoefficient). 
+Eq.~(\ref{eq:TmaxAsAFunctionOfIVErec}) reproduces the exact temperature values for a large range of heat transfer coefficients $h$; for $h_L + h_R \geq 10^{4}$~\hcoefficient~the relative error in predicted temperatures remains below 1~\%. 
+Only when $h$ approaches values for which the device starts to overheat, either a deviation ($4\cdot 10^3 \leq h_L + h_R \leq 10^4$ \hcoefficient) or thermal runaways are obtained ($h_L + h_R \geq 4\cdot 10^3$ \hcoefficient). 
 Details are shown in the Supporting Information.
 
 \section{Conclusions}
@@ -636,8 +635,8 @@ For such a choice of the thermal parameters, any other change in the OLED setup 
 
 % First of all, when one decreases any transport parameter beyond some limit, temperature rapidly ramps up. Moreover, because heat transport is coupled to electric transport, this increase comes not only from blocked heat outflow, but also because the device heating itself increases. From more practical point of view it means that the device can operate in 2 regimes. When the temperature compared to ambient temperature is low (by "low" we mean at maximum several degrees), OLED is not sensitive to the thermal transport parameters changes and we assume that it will be more stable under structural changes, which are part of OLED's degradation. When the temperature increases above that, device becomes unstable and any fluctuations in operating conditions can start runaway process.
 
-The thermal conductivity of realistically thin organic layers only marginally affect the temperature in the device, in fact, the temperature adopted in an electrically active organic layer is essentially constant. 
-The extent of this temperature and the temperature profile across the entire stack is determined by the thermal properties of the encapsulation layers, the substrate layers, and the heat transfer coefficient associated to heat exchange between the outermost OLED surfaces and the ambient environment.
+The thermal conductivity of realistically thin organic layers only marginally affect the temperature in the device; in fact, the temperature adopted in an electrically active organic layer is essentially constant. 
+The temperature profile across the entire stack is determined by the thermal properties of the encapsulation layers, the substrate layers, and the heat transfer coefficient associated to heat exchange between the outermost OLED surfaces and the ambient environment.
 Self-heating arising from an inadequate heat dissipation from the heat source towards the exterior, e.g., due to a limited choice in terms of the substrate, can neither be counter-balanced by a larger thermal conductivity, nor by thicker organic films. 
 % Utilizing analytic solution on 1D heat equation, we show that temperature increase coming from h-coefficient and thermal conductivity comes separately and additively. 
 % Therefore, if excess temperature came from one parameter, one cannot compensate it by tuning another one. Thus, existing device problems come from low h-coefficient, i.e. inefficient heat outflow and to beat them we should be more careful with the choice of the substrate. 
